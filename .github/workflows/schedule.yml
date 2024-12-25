@@ -1,16 +1,16 @@
-name: Scheduled Workflow
-on:
-  schedule:
-    # Runs at 12:00 AM UTC daily
-    - cron: "0 0 * * *"
-  workflow_dispatch: # Manual trigger
+name: Scheduled Workflow # Workflow name
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
+on: # Workflow triggers
+  schedule: # Automatic trigger based on cron schedule
+    - cron: "0 0 * * *" # Runs at 12:00 AM UTC daily
+  workflow_dispatch: # Enables manual triggering from GitHub UI
+
+jobs: # Define the job(s) to execute
+  build: # Job name
+    runs-on: ubuntu-latest # Specify the runner (OS environment)
+    steps: # Steps to execute in the job
+      - name: Checkout Code # Step 1: Check out repository code
         uses: actions/checkout@v2
 
-      - name: Run Scheduled Job
-        run: echo "Executing scheduled task..."
+      - name: Run Scheduled Job # Step 2: Run the scheduled task
+        run: echo "Executing scheduled task..." # Command to execute
