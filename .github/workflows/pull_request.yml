@@ -1,0 +1,17 @@
+# File: .github/workflows/pull_request.yml
+name: Pull Request Trigger Example
+
+on:
+  pull_request:  # Trigger workflow on PR events
+    branches:
+      - main      # Trigger only on PRs targeting the main branch
+
+jobs:
+  run-on-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Check PR Details
+        run: echo "This workflow was triggered by a Pull Request!"
