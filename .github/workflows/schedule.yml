@@ -1,0 +1,15 @@
+name: Scheduled Workflow
+on:
+  schedule:
+    # Runs at 12:00 AM UTC daily
+    - cron: "0 0 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Run Scheduled Job
+        run: echo "Executing scheduled task..."
