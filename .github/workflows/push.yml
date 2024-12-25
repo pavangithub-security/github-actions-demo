@@ -1,0 +1,16 @@
+name: Push Trigger Example
+
+on:
+  push:
+    branches:
+      - main  # Trigger on pushes to the main branch
+
+jobs:
+  run-on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2  # Clone the repository
+
+      - name: Say Hello
+        run: echo "This workflow was triggered by a push to the main branch!"
