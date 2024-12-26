@@ -1,0 +1,14 @@
+# .github/workflows/repository_variables.yml
+name: Repository Variables Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  example_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Repository Variable
+        run: echo "${{ vars.GREETING }}"
