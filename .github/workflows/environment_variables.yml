@@ -10,8 +10,8 @@ jobs:
   example:
     runs-on: ubuntu-latest
     env:
-      GREETING: "Hello" # Define an environment variable
-      TARGET: "GitHub Actions" # Define another environment variable
+      GREETING: "Welcome" # Define an environment variable
+      TARGET: "Developers" # Define another environment variable
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
