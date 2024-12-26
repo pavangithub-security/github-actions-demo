@@ -1,0 +1,14 @@
+name: Manual Trigger Workflow
+
+on:
+  workflow_dispatch: # Enables manual trigger from the GitHub interface
+
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Run Manual Job
+        run: echo "This workflow was triggered manually!"
