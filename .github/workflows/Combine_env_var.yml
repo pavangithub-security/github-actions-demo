@@ -11,8 +11,8 @@ jobs:
       JOB_VAR: "Defined at Job Level"
     steps:
       - name: Print Global Variable at Job Level
-        run: echo "Global Variable: $GLOBAL_VAR"
+        run: echo "Global Variable: ${GLOBAL_VAR}"
       - name: Override Variable at Step Level
         env:
           GLOBAL_VAR: "Step Level"
-        run: echo "Overridden Global Variable: $GLOBAL_VAR"
+        run: echo "Overridden Global Variable: ${GLOBAL_VAR}"

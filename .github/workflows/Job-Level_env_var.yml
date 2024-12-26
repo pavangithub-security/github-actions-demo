@@ -1,5 +1,5 @@
 # Job-Level Environment Variables
-name: Job-Level Environment Variables
+name: Job-Level_Environment_Variables
 on: push
 jobs:
   example:
@@ -8,4 +8,4 @@ jobs:
       JOB_VAR: "Job Level Variable"
     steps:
       - name: Print Job Variable
-        run: echo "Job Variable: $JOB_VAR"
+        run: echo "Job Variable: ${JOB_VAR}"

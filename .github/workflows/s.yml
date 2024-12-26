@@ -8,4 +8,4 @@ jobs:
       - name: Print Step Variable
         env:
           STEP_VAR: "Step Level Variable"
-        run: echo "Step Variable: $STEP_VAR"
+        run: echo "Step Variable: ${STEP_VAR}"
