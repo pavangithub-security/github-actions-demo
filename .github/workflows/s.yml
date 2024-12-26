@@ -1,0 +1,11 @@
+# Step-Level Environment Variables
+name: Step-Level Environment Variables
+on: push
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Step Variable
+        env:
+          STEP_VAR: "Step Level Variable"
+        run: echo "Step Variable: $STEP_VAR"

@@ -1,0 +1,11 @@
+# Job-Level Environment Variables
+name: Job-Level Environment Variables
+on: push
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    env:
+      JOB_VAR: "Job Level Variable"
+    steps:
+      - name: Print Job Variable
+        run: echo "Job Variable: $JOB_VAR"

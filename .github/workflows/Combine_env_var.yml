@@ -1,0 +1,18 @@
+# Combine Environment Variables
+name: Combine Environment Variables
+on: push
+env:
+  GLOBAL_VAR: "Workflow Level"
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    env:
+      GLOBAL_VAR: "Job Level"
+      JOB_VAR: "Defined at Job Level"
+    steps:
+      - name: Print Global Variable at Job Level
+        run: echo "Global Variable: $GLOBAL_VAR"
+      - name: Override Variable at Step Level
+        env:
+          GLOBAL_VAR: "Step Level"
+        run: echo "Overridden Global Variable: $GLOBAL_VAR"
